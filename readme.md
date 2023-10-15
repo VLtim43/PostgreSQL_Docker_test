@@ -17,3 +17,26 @@ docker run -d \
   -p 5533:5432 \
   postgres:latest
 ```
+### 2. Generate the Prisma client and apply database migrations
+
+```
+npx prisma generate
+npx prisma migrate dev
+```
+
+### 3. Run the Express Application
+
+```
+npm install
+npm start
+```
+
+## Usage
+### Get todo
+```
+curl http://localhost:3000/todos
+```
+### Podt todo
+```
+curl -X POST -H "Content-Type: application/json" -d '{"to_do": "New Task", "done": false}' http://localhost:3000/todos
+```
