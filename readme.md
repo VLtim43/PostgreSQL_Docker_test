@@ -36,7 +36,7 @@ npm start
 ```
 curl http://localhost:3000/todos
 ```
-### Podt todo
+### Post todo
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"to_do": "New Task", "done": false}' http://localhost:3000/todos
 ```
